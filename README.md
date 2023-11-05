@@ -1,4 +1,4 @@
-# Darts Points Application
+# Darts Points Calculator
 
 ## Planned Features
 - Choosing between common score entries and also custom
