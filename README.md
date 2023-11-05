@@ -4,6 +4,7 @@
 - Choosing between common score entries and also custom
 - Checkout suggestions
 - Creating player profiles and performance tracking
+- Profile suggestions on new game
 - Adding players to the current game (also deleting)
 - Being able to look up scores after game
 - App's own numeric keypad
