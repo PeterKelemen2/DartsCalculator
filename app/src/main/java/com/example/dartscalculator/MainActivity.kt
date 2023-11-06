@@ -4,7 +4,6 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.view.ViewGroup
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
@@ -13,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var headerTableLayout: TableLayout
     private lateinit var scrollTable: TableLayout
+    private val playerList = arrayOf("LOOOOOOOOONGNAME", "Shortname", "Name")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
         headerTableLayout = findViewById(R.id.headerTableLayout)
         scrollTable = findViewById(R.id.scrollTable)
 
-        addHeaderRow()
+        playerList
+
+        addHeaderRow(playerList)
 
         // Add rows dynamically
         for (i in 0 until 100) {
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun addHeaderRow() {
+    private fun addHeaderRow(pList: Array<String>) {
         val headerRow = TableRow(this)
 
         val cellParams = TableRow.LayoutParams(
@@ -38,10 +40,10 @@ class MainActivity : AppCompatActivity() {
             1.0f
         )
 
-        for (i in 1 until 6) {
+        for (i in 0 until pList.count()) {
             val headerCellText = TextView(this)
             headerCellText.setTextColor(Color.WHITE)
-            headerCellText.text = "Player #$i"
+            headerCellText.text = pList[i].toString()
             headerCellText.layoutParams = cellParams
             headerCellText.gravity = Gravity.CENTER
             headerCellText.textSize = 16f
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             TableRow.LayoutParams.WRAP_CONTENT
         )
 
-        for (i in 1 until 6) {
+        for (i in 0 until playerList.count()) {
             val cell = TextView(this)
             cell.text = (i * 111).toString()
 
