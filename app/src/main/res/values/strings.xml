@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DartsCalculator</string>
+    <string name="nameColumn">Name</string>
+    <string name="nameColumn1">Name1</string>
+    <string name="nameColumn2">Name2</string>
+    <string name="nameColumn3">Name3</string>
+
 </resources>
